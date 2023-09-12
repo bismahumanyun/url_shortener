@@ -1,0 +1,18 @@
+<!-- templates/index.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">Shorten Your Long URLs</h2>
+<form method="post">
+  {{ form.hidden_tag() }}
+  <div class="input-group mb-3">
+    {{ form.url(class="form-control", placeholder="https://example.com") }}
+    <button type="submit" class="btn btn-success">Shorten</button>
+  </div>
+</form>
+
+{% if short_url %}
+<div class="alert alert-info mt-3">
+  Shortened URL: <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+</div>
+{% endif %}
+{% endblock %}

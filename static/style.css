@@ -1,0 +1,13 @@
+/* static/style.css */
+body {
+    padding-top: 20px;
+  }
+  .navbar {
+    border-radius: 0;
+  }
+  .input-group .form-control {
+    max-width: 700px;
+  }
+  .alert a {
+    color: #007bff;
+  }

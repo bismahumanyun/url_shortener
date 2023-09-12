@@ -1,0 +1,21 @@
+<!-- templates/dashboard.html -->
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">All Shortened URLs</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Original URL</th>
+      <th>Short Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for url in urls %}
+    <tr>
+      <td>{{ url.original_url }}</td>
+      <td><a href="{{ request.host_url }}{{ url.short_id }}" target="_blank">{{ request.host_url }}{{ url.short_id }}</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
